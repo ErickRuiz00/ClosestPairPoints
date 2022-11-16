@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares de Puntos más Cercanos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6c6d99698e.js" crossorigin="anonymous"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+</head>
+<body>
+    <div class="home">
+        <h1>Pares de puntos más cercanos</h1>
+        <p>Diviertete aprendiendo a resolver el problema de "pares de puntos más cercanos"
+            con una animación interactiva.
+        </p>
+        <a href="#animation">¡Vamos!</a>
+    </div>
+
+    <!-- <div class="problem" id="problem">
+        <h2>Problema</h2>
+        <p>Dado un arreglo de "n" puntos en el plano, encuentra el par de
+            puntos más cercano entre ellos</p>
+        <div class="img_container">
+            <img src="https://img.freepik.com/free-photo/starry-night-sky_1048-11828.jpg?w=740&t=st=1663108474~exp=1663109074~hmac=3a712f012db9a6edc21668cc89323edae53a66830f5632d1087896f8ee2148c9" alt="">
+        </div>
+    </div> -->
+
+    <section id="animation">
+        <p class="data" id="coord"></p>
+        <div class="animation__canvas">
+            <canvas id="lienzo"></canvas>
+            <div class="info">
+                <span class="steps"><i class="fa-solid fa-circle-info"></i>
+                    <ol class="instructions">
+                        <li>Da click en cualquier parte dentro del marca para dibujar un punto,
+                            o puedes presionar puntos aleatorios ( <i class="fa-solid fa-shuffle"></i> )
+                        </li>
+                        <li>Existe un limite de hasta 20 puntos</li>
+                        <li>Presiona "iniciar animación" para ver la solución por fuerza bruta
+                            ( <i class="fa-solid fa-play"></i> )
+                        </li>
+                        <li>Presiona "Divide & Conquer" para ver la solución optimizada (
+                            <i class="fa-solid fa-crown"></i> )
+                        </li>
+                        <li>Presiona "Limpiar" para reiniciar la animacion
+                            ( <i class="fa-solid fa-rotate"></i> )
+                        </li>
+                    </ol>
+                </span>
+                <span class="items"><i class="fa-solid fa-bag-shopping"></i>
+                    <div class="points">
+                        <p>Puntos agregados</p>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="animation__buttons">
+            <button id="start_BF">Iniciar animacion</button>
+            <button id="start_DyC">Divide & Conquer</button>
+            <button id="random">Puntos aleatorios</button>
+            <button id="restart">Limpiar</button>
+        </div>
+        <div class="animation__buttons-mobile">
+            <button id="start_BFM"><i class="fa-solid fa-play"></i></button>
+            <button id="start_DyCM"><i class="fa-solid fa-crown"></i></button>
+            <button id="randomM"><i class="fa-solid fa-shuffle"></i></button>
+            <button id="restartM"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+    </section>
+</body>
+</html>
